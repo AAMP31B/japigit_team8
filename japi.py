@@ -12,7 +12,7 @@ def getStockData(symbol):
     print(response)
     dict = json.loads(response)
     print("The current price of {} is: ${}".format(symbol, dict["Stock Quotes"][0]["2. price"]))
-    print()
+    print("Stock Quotes retrieved successfully!"+\n)
 
 if __name__ == "__main__":
     while True:
