@@ -1,0 +1,114 @@
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+=
+
+Enter Stock Ticker (enter q to exit): orc
+{
+    "Meta Data": {
+        "1. Information": "Batch Stock Market Quotes",
+        "2. Notes": "IEX Real-Time",
+        "3. Time Zone": "US/Eastern"
+    },
+    "Stock Quotes": [
+        {
+            "1. symbol": "ORC",
+            "2. price": "5.7900",
+            "3. volume": "--",
+            "4. timestamp": "2019-10-18 15:59:53"
+        }
+    ]
+}
+The current price of orc is: $5.7900
+
+Enter Stock Ticker (enter q to exit): elf
+{
+    "Meta Data": {
+        "1. Information": "Batch Stock Market Quotes",
+        "2. Notes": "IEX Real-Time",
+        "3. Time Zone": "US/Eastern"
+    },
+    "Stock Quotes": [
+        {
+            "1. symbol": "ELF",
+            "2. price": "17.6550",
+            "3. volume": "--",
+            "4. timestamp": "2019-10-18 15:59:36"
+        }
+    ]
+}
+The current price of elf is: $17.6550
+
+Enter Stock Ticker (enter q to exit): aapl
+{
+    "Meta Data": {
+        "1. Information": "Batch Stock Market Quotes",
+        "2. Notes": "IEX Real-Time",
+        "3. Time Zone": "US/Eastern"
+    },
+    "Stock Quotes": [
+        {
+            "1. symbol": "AAPL",
+            "2. price": "236.4200",
+            "3. volume": "--",
+            "4. timestamp": "2019-10-18 16:12:50"
+        }
+    ]
+}
+The current price of aapl is: $236.4200
+
+Enter Stock Ticker (enter q to exit): work
+{
+    "Meta Data": {
+        "1. Information": "Batch Stock Market Quotes",
+        "2. Notes": "IEX Real-Time",
+        "3. Time Zone": "US/Eastern"
+    },
+    "Stock Quotes": [
+        {
+            "1. symbol": "WORK",
+            "2. price": "21.8100",
+            "3. volume": "--",
+            "4. timestamp": "2019-10-18 15:59:55"
+        }
+    ]
+}
+The current price of work is: $21.8100
+
+Enter Stock Ticker (enter q to exit): snap
+{
+    "Meta Data": {
+        "1. Information": "Batch Stock Market Quotes",
+        "2. Notes": "IEX Real-Time",
+        "3. Time Zone": "US/Eastern"
+    },
+    "Stock Quotes": [
+        {
+            "1. symbol": "SNAP",
+            "2. price": "13.5150",
+            "3. volume": "--",
+            "4. timestamp": "2019-10-18 15:59:58"
+        }
+    ]
+}
+The current price of snap is: $13.5150
+
+Enter Stock Ticker (enter q to exit): msft
+{
+    "Meta Data": {
+        "1. Information": "Batch Stock Market Quotes",
+        "2. Notes": "IEX Real-Time",
+        "3. Time Zone": "US/Eastern"
+    },
+    "Stock Quotes": [
+        {
+            "1. symbol": "MSFT",
+            "2. price": "137.4400",
+            "3. volume": "--",
+            "4. timestamp": "2019-10-18 15:59:55"
+        }
+    ]
+}
+The current price of msft is: $137.4400
+
+Enter Stock Ticker (enter q to exit): 
