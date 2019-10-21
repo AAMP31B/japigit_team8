@@ -1,0 +1,234 @@
+Script started on Mon 21 Oct 2019 12:44:58 AM MST
+[?1034hbash-4.2$ mkdir japigit[K[K[K[K[K[K[K./japigit
+bash-4.2$ cd ./japigit/
+bash-4.2$ ls
+bash-4.2$ git init
+Initialized empty Git repository in /afs/asu.edu/users/m/h/o/mhodges5/IFT458/japigit/.git/
+bash-4.2$ ls
+bash-4.2$ ls -a
+.  ..  .git
+bash-4.2$ git config --global user.name "Michael Hodges"
+bash-4.2$ git config --global user.email mhodges5@asu.edu
+bash-4.2$ git add .
+bash-4.2$ git commit -m "First two files, japi.py and japi.out added"a"n"[1P"[1P" "a"n"d" "c"o"m"m"i"t"t"e"d"
+[master (root-commit) 76d9799] First two files, japi.py and japi.out added and committed
+ 2 files changed, 137 insertions(+)
+ create mode 100644 japi.out
+ create mode 100644 japi.py
+bash-4.2$ nano japi.py
+[?1049h[1;35r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                     File: japi.py                                                  [3;1H(B[m#Project 5 IFT 458[4d#Python Stock Price Requestor w/ AlphaVantage API[6dimport urllib.request[7dimport json[9ddef getStockData(symbol):[10;5Hkey = '3I7I7IQVF8KZ1339'[11;5Hurl = 'https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols='+symbol+'&apikey=$[12;5Hconnection = urllib.request.urlopen(url)[13;5Hresponse = connection.read().decode()[14;5Hprint(response)[15;5Hdict = json.loads(response)[16;5Hprint("The current price of {} is: ${}".format(symbol, dict["Stock Quotes"][0]["2. price"]))[17;5Hprint()[19dif __name__ == "__main__":[20;5Hwhile True:[21;9HstockSymbol = input("Enter Stock Ticker (enter q to exit): ")[22;9Hif stockSymbol != 'q':[23;14HgetStockData(stockSymbol)[24;9Helse:[25dbreak[33;28H(B[0;7m[ Read 23 lines (Converted from DOS format) ][34d^G(B[m Get Help     (B[0;7m^O(B[m WriteOut     (B[0;7m^R(B[m Read File    (B[0;7m^Y(B[m Prev Page    (B[0;7m^K(B[m Cut Text     (B[0;7m^C(B[m Cur Pos[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^J(B[m Justify	(B[0;7m^W(B[m Where Is     (B[0;7m^V(B[m Next Page    (B[0;7m^U(B[m UnCut Text   (B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[12d[13d[14d[15d[16d[17d    pri	t([1;91H(B[0;7mModified[17;11H(B[m")S)[33d[K[17;13Ht)o)c)k)[Z )Q)u)o)t)e)s) )[Zr)e)t)r)i)e)v)e)[Zd) )s)u)c)cc)e)s)[Zss)f)u)l)ll)y)!)")[Z+)\)n)[33d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                        [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;62H(B[0;7mFile Name to Write [DOS Format]: japi.py                    [34d^G(B[m Get Help[34;26H(B[0;7mM-D(B[m DOS Format[34;51H(B[0;7mM-A(B[m Append[34;76H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel	         (B[0;7mM-M(B[m Mac Format[35;51H(B[0;7mM-P(B[m Prepend[33;41H[34d[39;49m(B[m[J[1;91H(B[0;7m        [33;41H(B[m[1K (B[0;7m[ Wrote 23 lines ](B[m[K[35;100H[35;1H[?1049l[?1l>bash-4.2$ git add .
+bash-4.2$ git commit -am "Added extra print line to japi.py"
+[master 81d1266] Added extra print line to japi.py
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+bash-4.2$ git status
+# On branch master
+nothing to commit, working directory clean
+bash-4.2$ git status -s
+bash-4.2$ echo "hello there" >hello.txt
+bash-4.2$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hello.txt
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.2$ git add hello.txt 
+bash-4.2$ git status -s
+A  hello.txt
+bash-4.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   hello.txt
+#
+bash-4.2$ echo "We are testing git status">>hello.txt 
+bash-4.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   hello.txt
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   hello.txt
+#
+bash-4.2$ git diff
+[?1h=diff --git a/hello.txt b/hello.txt[m
+index c7c7da3..0fffb77 100644[m
+--- a/hello.txt[m
++++ b/hello.txt[m
+@@ -1 +1,2 @@[m
+ hello there[m
++We are testing git status[m
+[K[?1l>bash-4.2$ git commit -m "committing, I think this ignores the unstaged work?"
+[master fbeb52e] committing, I think this ignores the unstaged work?
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+bash-4.2$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   hello.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-4.2$ git add .
+bash-4.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   hello.txt
+#
+bash-4.2$ git log
+[?1h=commit fbeb52e8f08f22e895ce8e0b458024d71e578e06[m
+Author: Michael Hodges <mhodges5@asu.edu>[m
+Date:   Mon Oct 21 00:55:59 2019 -0700[m
+[m
+    committing, I think this ignores the unstaged work?[m
+[m
+commit 81d1266e888b141d750df52e6aae61ab1867ff70[m
+Author: Michael Hodges <mhodges5@asu.edu>[m
+Date:   Mon Oct 21 00:51:28 2019 -0700[m
+[m
+    Added extra print line to japi.py[m
+[m
+commit 76d9799ef0288b018ef2a5692d4b29d55f028257[m
+Author: Michael Hodges <mhodges5@asu.edu>[m
+Date:   Mon Oct 21 00:49:34 2019 -0700[m
+[m
+    First two files, japi.py and japi.out added and committed[m
+[K[?1l>bash-4.2$ git status -s
+M  hello.txt
+bash-4.2$ git log -oneline
+fatal: unrecognized argument: -oneline
+bash-4.2$ git log ?
+fatal: ambiguous argument '?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+bash-4.2$ git log --oneline
+[?1h=fbeb52e committing, I think this ignores the unstaged work?[m
+81d1266 Added extra print line to japi.py[m
+76d9799 First two files, japi.py and japi.out added and committed[m
+[K[?1l>bash-4.2$ git status --s
+M  hello.txt
+bash-4.2$ git brancch[K[Kh
+* master
+bash-4.2$ echo "master version">>hello.txt
+bash-4.2$ git add .
+bash-4.2$ git commit -m "Added master version to hellow[K"
+[master 1bacd41] Added master version to hello
+ 1 file changed, 2 insertions(+)
+bash-4.2$ git branch feature
+bash-4.2$ git brancch[K[Kh
+  feature
+* master
+bash-4.2$ git checkout feature
+Switched to branch 'feature'
+bash-4.2$ git branch
+* feature
+  master
+bash-4.2$ echo "new file" >hello_feature
+bash-4.2$ echo "feature version" >>hello.txt 
+bash-4.2$ git add .
+bash-4.2$ git commit -m "feature version"
+[feature 242f6a1] feature version
+ 2 files changed, 2 insertions(+)
+ create mode 100644 hello_feature
+bash-4.2$ git checkout master
+Switched to branch 'master'
+bash-4.2$ git branch
+  feature
+* master
+bash-4.2$ echo "Initial content" > merge.txt
+bash-4.2$ git add.[K .
+bash-4.2$ git commit -m "adding new file merge on master"
+[master ea171dc] adding new file merge on master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 merge.txt
+bash-4.2$ git branch newbranch
+bash-4.2$ echo "Update on master" > merge.txt
+bash-4.2$ git add .
+bash-4.2$ git commit -m "update on master"
+[master 1111a4e] update on master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bash-4.2$ git checkout newbranch
+Switched to branch 'newbranch'
+bash-4.2$ echo "upd[K[K[KUpdate on newbranch" > merge.txt
+bash-4.2$ git commit -am "update on newbranch"
+[newbranch 7962e22] update on newbranch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bash-4.2$ git checkout master
+Switched to branch 'master'
+bash-4.2$ git merge newbranch
+Auto-merging merge.txt
+CONFLICT (content): Merge conflict in merge.txt
+Automatic merge failed; fix conflicts and then commit the result.
+bash-4.2$ git status
+# On branch master
+# You have unmerged paths.
+#   (fix conflicts and run "git commit")
+#
+# Unmerged paths:
+#   (use "git add <file>..." to mark resolution)
+#
+#	both modified:      merge.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-4.2$ cat merge.txt 
+<<<<<<< HEAD
+Update on master
+=======
+Update on newbranch
+>>>>>>> newbranch
+bash-4.2$ echo "merged version" > merge.txt 
+bash-4.2$ git add .
+bash-4.2$ git commit -m "Fixed conflicts"
+[master b21716b] Fixed conflicts
+bash-4.2$ git status
+# On branch master
+nothing to commit, working directory clean
+bash-4.2$ git branch -d newbranch
+Deleted branch newbranch (was 7962e22).
+bash-4.2$ echo "file to delete" > to_delete.txt
+bash-4.2$ git add. [K[K .
+bash-4.2$ git commit -m "yet another lab file"
+[master b0321a1] yet another lab file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 to_delete.txt
+bash-4.2$ git rm to_delete.txt 
+rm 'to_delete.txt'
+bash-4.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    to_delete.txt
+#
+bash-4.2$ ls
+hello.txt  japi.out  japi.py  merge.txt
+bash-4.2$ git reset --hard HEAD
+HEAD is now at b0321a1 yet another lab file
+bash-4.2$ git status
+# On branch master
+nothing to commit, working directory clean
+bash-4.2$ ls
+hello.txt  japi.out  japi.py  merge.txt  to_delete.txt
+bash-4.2$ git rm to_delete.txt 
+rm 'to_delete.txt'
+bash-4.2$ git status -sb
+## master
+D  to_delete.txt
+bash-4.2$ git commit -m "file deletion"
+[master bbd39fc] file deletion
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 to_delete.txt
+bash-4.2$ exit
+exit
+
+Script done on Mon 21 Oct 2019 01:07:40 AM MST
